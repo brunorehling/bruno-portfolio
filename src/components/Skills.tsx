@@ -8,7 +8,7 @@ export function Skills() {
 
                 <h1 className="text-5xl font-bold mb-4 text-white">Stack  <span className="text-muted font-normal">&</span> < br/> Ferramentas</h1>
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div>
                         <SkillCard role="frontend" tecnologies={["React", "TypeScript", "Tailwind CSS", "Next.js"]} />
                     </div>

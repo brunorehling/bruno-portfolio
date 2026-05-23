@@ -18,7 +18,7 @@ export function Projects() {
             </div>
 
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div>
                     <ProjectCard
                         title="Glasses CNN"

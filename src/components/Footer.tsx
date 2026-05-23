@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer className="border-t border-white/5 py-8">
-      <div className="max-w-4xl mx-auto px-10 flex items-center justify-between">
+      <div className="max-w-4xl mx-auto px-10 flex flex-col items-center justify-between sm:flex-row gap-4">
 
         <p className="text-dim text-xs">
           Feito com <span className="text-green">♥</span> e muito{' '}

@@ -3,17 +3,17 @@ export function Hero() {
   return (
     <section id="hero" className="min-h-screen flex flex-col justify-center pt-16">
 
-      <div className="flex items-center justify-center max-w-70 rounded-4xl border border-green">
-        <div className="bg-green w-4 h-4 rounded-full mr-2 blink" />
+      <div className="flex items-center justify-center max-w-70 rounded-4xl text-green bg-green/8 border border-green/20">
+        <div className="bg-green w-2 h-2 rounded-full mr-2 blink" />
         <h1>
             Disponível para oportunidades
         </h1>
       </div>
-      <h2 className="text-2xl font-bold text-dim">
+      <p className=" text-dim mt-5 mb-5">
         Desenvolvedor Full Stack · Pelotas - RS
-      </h2>
+      </p>
 
-      <p className="text-6xl">
+      <p className="text-6xl mb-10">
         Olá, <br /> sou <span className="font-bold text-green">Bruno</span> —<br /> dev fullstack.
       </p>
       
@@ -22,14 +22,20 @@ export function Hero() {
         arquitetura escalável e interfaces que as pessoas realmente gostam de usar.
       </p>
 
-      <div className="flex justify-between w-[30vw] gap-4 mt-8">
-        <a href="#projetos" className="w-[12vw] h-[5vh] bg-green text-black font-bold py-2 px-4 rounded-xl hover:bg-green/80 transition-colors duration-200">
-          &lt;&gt; Ver projetos
-        </a>
-        <a href="#contato" className="w-[15vw] h-[5vh] bg-bg3 text-muted border border-bg2 font-bold py-2 px-4 rounded-xl hover:text-white transition-colors duration-200">
-          Entrar em contato
-        </a>
-      </div>
+      <div className="flex gap-4 mt-8">
+        <a
+          href="#projetos"
+          className="flex items-center justify-center bg-green text-black font-bold py-3 px-6 rounded-xl hover:bg-green/80 transition-colors duration-200 text-sm"
+        > 
+        &lt;&gt; Ver projetos
+      </a>
+      <a
+        href="#contato"
+        className="flex items-center justify-center bg-bg3 text-muted border border-white/10 font-bold py-3 px-6 rounded-xl hover:text-white hover:border-white/20 transition-all duration-200 text-sm"
+      >
+        Entrar em contato →
+      </a>
+    </div>
 
     </section>
   )
