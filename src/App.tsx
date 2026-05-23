@@ -1,5 +1,6 @@
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
+import { Cursor } from "./components/Cursor";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
@@ -10,6 +11,7 @@ import { Terminal } from "./components/Terminal";
 function App() {
   return (
     <div className="min-h-screen">
+      <Cursor />
       <Nav />
 
       <main className="max-w-6xl mx-auto px-10">
