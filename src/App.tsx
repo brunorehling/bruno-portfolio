@@ -1,5 +1,10 @@
+import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
+import { Projects } from "./components/Projects";
+import { Skills } from "./components/Skills";
 import { Terminal } from "./components/Terminal";
 
 function App() {
@@ -12,21 +17,21 @@ function App() {
         <div className="divider" />
 
         <section id="terminal"><Terminal /></section>
-        <div className="divider" />
+        <div className="divider m-10" />
 
-        <section id="sobre">sobre</section>
-        <div className="divider" />
+        <section id="sobre"><About /></section>
+        <div className="divider m-10" />
 
-        <section id="skills">skills</section>
-        <div className="divider" />
+        <section id="skills"><Skills /></section>
+        <div className="divider m-10" />
 
-        <section id="projetos">projetos</section>
-        <div className="divider" />
+        <section id="projetos"><Projects /></section>
+        <div className="divider m-10" />
 
-        <section id="contato">contato</section>
+        <section id="contato"><Contact /></section>
       </main>
 
-      <footer>footer</footer>
+      <footer><Footer /></footer>
     </div>
   )
 }

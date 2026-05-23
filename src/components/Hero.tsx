@@ -23,10 +23,10 @@ export function Hero() {
       </p>
 
       <div className="flex justify-between w-[30vw] gap-4 mt-8">
-        <a href="#projetos" className="w-[12vw] bg-green text-black font-bold py-2 px-4 rounded-2xl hover:bg-green/80 transition-colors duration-200">
+        <a href="#projetos" className="w-[12vw] h-[5vh] bg-green text-black font-bold py-2 px-4 rounded-xl hover:bg-green/80 transition-colors duration-200">
           &lt;&gt; Ver projetos
         </a>
-        <a href="#contato" className="w-[12vw] bg-bg3 text-muted border border-bg2 font-bold py-2 px-4 rounded hover:text-white transition-colors duration-200">
+        <a href="#contato" className="w-[15vw] h-[5vh] bg-bg3 text-muted border border-bg2 font-bold py-2 px-4 rounded-xl hover:text-white transition-colors duration-200">
           Entrar em contato
         </a>
       </div>
