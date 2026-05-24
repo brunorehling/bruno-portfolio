@@ -23,7 +23,7 @@ export function Projects() {
                     <ProjectCard
                         title="Glasses CNN"
                         description="Rede neural convolucional treinada para classificar óculos por formato e material. O modelo analisa a imagem e identifica o estilo do frame automaticamente."
-                        link="https://github.com/..."
+                        link="https://github.com/brunorehling/API_CNN"
                         area="Machine Learning · Acadêmico"
                         tech={['Python', 'PyTorch', 'CNN', 'Node.js']}
                         index={2}
