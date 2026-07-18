@@ -12,7 +12,7 @@ export const translations = {
       saudacao: 'Olá,',
       sou: 'sou',
       titulo: 'dev fullstack.',
-      descricao1: 'Estudante de',
+      descricao: 'Estudante de',
       descricao2: 'ADS na UniSenac',
       descricao3: ', construo aplicações web e mobile com foco em código limpo, arquitetura escalável e interfaces que as pessoas realmente gostam de usar.',
       btn1: 'Ver projetos',

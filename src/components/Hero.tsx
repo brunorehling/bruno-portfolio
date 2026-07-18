@@ -21,7 +21,7 @@ export function Hero() {
       </p>
       
       <p className="text-xl text-muted max-w-2xl">
-        {t.hero.descricao1} <span className="font-bold text-green">{t.hero.descricao2}</span> {t.hero.descricao3}
+        {t.hero.descricao} <span className="font-bold text-green">{t.hero.descricao2}</span> {t.hero.descricao3}
       </p>
 
       <div className="flex gap-4 mt-8">
