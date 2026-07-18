@@ -1,5 +1,5 @@
 export type SkillCardProps = {
-    role: "frontend" | "backend" | "devops & infraestrutura" | "banco de dados" | "outras";
+    role: string;
     tecnologies: string[];
 }
 

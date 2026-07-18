@@ -1,4 +1,9 @@
+import { useLanguage } from '../context/LenguageContext'
+
+
 export function Contact() {
+  const { t } = useLanguage()
+
   return (
     <div className="relative flex flex-col items-center justify-center gap-6 bg-bg2 border border-white/5 p-16 rounded-2xl overflow-hidden text-center">
 
@@ -6,15 +11,15 @@ export function Contact() {
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-125 h-50 bg-green/5 blur-3xl rounded-full pointer-events-none" />
 
-      <p className="text-green text-xs tracking-[3px] uppercase">Vamos conversar</p>
+      <p className="text-green text-xs tracking-[3px] uppercase">{t.contato.super}</p>
 
       <h2 className="text-5xl font-bold tracking-tight">
-        Pronto para o{' '}
-        <em className="font-light text-muted not-italic">próximo nível</em>
+        {t.contato.titulo}{' '}
+        <em className="font-light text-muted not-italic">{t.contato.titulo2}</em>
       </h2>
 
       <p className="text-muted text-sm font-light max-w-sm">
-        Aberto para estágio, freela ou primeiro emprego como dev. Respondo rápido.
+        {t.contato.sub}
       </p>
 
       <div className="flex items-center gap-3 flex-wrap justify-center">
@@ -26,7 +31,7 @@ export function Contact() {
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
-          Enviar email
+          {t.contato.btn1}
         </a>
         <a
           href="https://www.linkedin.com/in/bruno-rehling-723061371?utm_source=share_via&utm_content=profile&utm_medium=member_android"

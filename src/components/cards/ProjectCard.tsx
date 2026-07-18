@@ -1,3 +1,5 @@
+import { useLanguage } from '../../context/LenguageContext'
+
 export type ProjectCardProps = {
     title: string
     description: string
@@ -8,6 +10,8 @@ export type ProjectCardProps = {
 }
 
 export function ProjectCard({ title, description, link, tech, area, index }: ProjectCardProps) {
+    const { t } = useLanguage()
+
     return (
         <div className="relative bg-bg2 border border-white/5 rounded-2xl p-8 flex flex-col gap-6 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-green/20 group">
 
@@ -54,7 +58,7 @@ export function ProjectCard({ title, description, link, tech, area, index }: Pro
                     <polyline points="15 3 21 3 21 9"/>
                     <line x1="10" y1="14" x2="21" y2="3"/>
                 </svg>
-                Ver projeto
+                {t.projetos.cardbtn}
             </a>
         </div>
     )

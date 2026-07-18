@@ -1,45 +1,48 @@
 import { ProjectCard } from "./cards/ProjectCard";
+import { useLanguage } from '../context/LenguageContext'
 
 
 export function Projects() {
+    const { t } = useLanguage()
+
+    const techs = [
+        ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'Supabase'],
+        ['Python', 'PyTorch', 'CNN', 'Node.js'],
+        ['React', 'TypeScript', 'Tailwind', 'Node.js', "orval"],
+    ]
+    const links = [
+        "https://gitlab.com/senac-projetos-de-desenvolvimento/2026-1-bruno-juan/alertamei-frontend",
+        "https://github.com/brunorehling/API_CNN",
+        "https://github.com/brunorehling/COOP"
+    ]
     return (
         <>
-            <h1 className="font-bold mb-4 text-dim">03 <span className="text-green ml-2">projetos</span></h1>
+            <h1 className="font-bold mb-4 text-dim">03 <span className="text-green ml-2">{t.projetos.titulo}</span></h1>
 
             <div className="grid grid-cols-1 gap-6 mb-6">
-                <ProjectCard 
-                    title="AlertaMei" 
-                    description="Aplicação financeira completa para Microempreendedores Individuais. Dashboard com DRE simplificado, controle de transações com separação PF/PJ, alertas do limite anual de R$81k e autenticação via Supabase. Mobile-first com migração planejada para React Native/Expo na segunda fase." 
-                    link="https://gitlab.com/senac-projetos-de-desenvolvimento/2026-1-bruno-juan/alertamei-frontend"
-                    area="TCC · Em desenvolvimento · 2026"
-                    tech={['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'Supabase']}
-                    index={1}
+                <ProjectCard
+                title={t.projetos.cards[0].title}
+                description={t.projetos.cards[0].description}
+                area={t.projetos.cards[0].area}
+                link={links[0]}
+                tech={techs[0]}
+                index={1}
                 />
             </div>
 
-
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div>
-                    <ProjectCard
-                        title="Glasses CNN"
-                        description="Rede neural convolucional treinada para classificar óculos por formato e material. O modelo analisa a imagem e identifica o estilo do frame automaticamente."
-                        link="https://github.com/brunorehling/API_CNN"
-                        area="Machine Learning · Acadêmico"
-                        tech={['Python', 'PyTorch', 'CNN', 'Node.js']}
-                        index={2}
-                    />
-                </div>
-                <div>
-                    <ProjectCard 
-                        area="Desenvolvimento FullStack · Acadêmico"
-                        title="COOP" 
-                        description="Plataforma de treinamento colaborativo para profissionais de TI. Usuários criam e participam de projetos práticos em equipe, simulando o ambiente real de desenvolvimento." 
-                        link="https://github.com/brunorehling/COOP"
-                        index={3}
-                        tech={['React', 'TypeScript', 'Tailwind', 'Node.js', "orval"]}
-                    />
-                </div>
+                {t.projetos.cards.slice(1).map((card, i) => (
+                <ProjectCard
+                    key={card.title}
+                    title={card.title}
+                    description={card.description}
+                    area={card.area}
+                    link={links[i + 1]}
+                    tech={techs[i + 1]}
+                    index={i + 2}
+                />
+                ))}
             </div>
-        </>
-    )
-}
+            </>
+        )
+    }
